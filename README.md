@@ -6,16 +6,8 @@ Styled with **neon-glass effects, smooth animations, and a gradient background**
 ---
 
 ## 🚀 Demo
-👉 [Live Demo on GitHub Pages](https://your-username.github.io/calculator-app/)  
-*(Replace with your actual link once you host it)*
+https://mini-calculator-blue.vercel.app/
 
----
-
-## 📸 Preview
-![Calculator Screenshot](screenshot.png)  
-*(Add a screenshot of your project and rename it to `screenshot.png` in the repo)*  
-
----
 
 ## ✨ Features
 - Modern **glassmorphism UI** ✨  
