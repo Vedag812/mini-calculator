@@ -1,13 +1,13 @@
 # 🧮 Modern Calculator
-
 A sleek, modern, and responsive calculator built with **HTML, CSS, and JavaScript**.  
 Styled with **neon-glass effects, smooth animations, and a gradient background** for a premium look.  
 
 ---
 
 ## 🚀 Demo
-https://mini-calculator-blue.vercel.app/
+👉 [Live Demo](https://mini-calculator-blue.vercel.app/)
 
+---
 
 ## ✨ Features
 - Modern **glassmorphism UI** ✨  
@@ -20,6 +20,15 @@ https://mini-calculator-blue.vercel.app/
 
 ## 🛠️ Tech Stack
 - **HTML5**  
-- **CSS3 (Flexbox, Grid, Animations, Gradients)**  
-- **JavaScript (Vanilla JS for logic)**  
+- **CSS3** (Flexbox, Grid, Animations, Gradients)  
+- **JavaScript (Vanilla JS)**  
 
+---
+
+## 📂 Installation & Usage
+
+You can run this calculator locally in just a few steps:
+
+1. **Clone the repository**
+   ```bash
+   git clone https://github.com/vedag812/mini-calculator-blue.git
