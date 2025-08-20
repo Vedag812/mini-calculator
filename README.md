@@ -31,6 +31,3 @@ Styled with **neon-glass effects, smooth animations, and a gradient background**
 - **CSS3 (Flexbox, Grid, Animations, Gradients)**  
 - **JavaScript (Vanilla JS for logic)**  
 
----
-
-## 📂 Project Structure
