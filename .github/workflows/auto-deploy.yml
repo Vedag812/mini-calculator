@@ -1,29 +1,24 @@
-name: Deploy to GitHub Pages (Auto-Host)
+name: Deploy to GitHub Pages
+
 on:
   push:
     branches:
       - main
-  workflow_dispatch:
+
+permissions:
+  contents: write
 
 jobs:
-  build-and-deploy:
+  deploy:
     runs-on: ubuntu-latest
+
     steps:
+      # Step 1: Checkout the repo
       - uses: actions/checkout@v4
-      - name: Setup Node (if needed)
-        uses: actions/setup-node@v4
-        with:
-          node-version: '18'
-      - name: Install & Build (if package.json)
-        run: |
-          if [ -f package.json ]; then
-            npm ci
-            if [ -f package.json ] && jq -r '.scripts.build // empty' package.json | grep -q . ; then
-              npm run build
-            fi
-          fi
-      - name: Deploy to Pages
+
+      # Step 2: Deploy the HTML/CSS site
+      - name: Deploy to GitHub Pages
         uses: peaceiris/actions-gh-pages@v3
         with:
           github_token: ${{ secrets.GITHUB_TOKEN }}
-          publish_dir: ./build
+          publish_dir: ./   # Use the folder containing your HTML/CSS files, e.g., ./ if in root
