@@ -1,30 +1,32 @@
-name: Deploy to GitHub Pages (Auto-Host)
+name: Deploy to GitHub Pages
+
 on:
   push:
     branches:
       - main
-  workflow_dispatch:
+
 permissions:
   contents: write
 
 jobs:
-  build-and-deploy:
+  build:
     runs-on: ubuntu-latest
+
     steps:
       - uses: actions/checkout@v4
-      - name: Setup Node (if needed)
-        uses: actions/setup-node@v4
+
+      - name: Setup Node
+        uses: actions/setup-node@v3
         with:
-          node-version: '18'
-      - name: Install & Build (if package.json)
-        run: |
-          if [ -f package.json ]; then
-            npm ci
-            if [ -f package.json ] && jq -r '.scripts.build // empty' package.json | grep -q . ; then
-              npm run build
-            fi
-          fi
-      - name: Deploy to Pages
+          node-version: 18
+
+      - name: Install dependencies
+        run: npm install
+
+      - name: Build project
+        run: npm run build
+
+      - name: Deploy
         uses: peaceiris/actions-gh-pages@v3
         with:
           github_token: ${{ secrets.GITHUB_TOKEN }}
